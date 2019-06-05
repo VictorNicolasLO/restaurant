@@ -15,7 +15,9 @@ export default {
   },
   methods: {
     onInput(ev) {
-      this.$emit("input", ev.target.value);
+      if (ev) {
+        alert(ev.target.tagName)
+      }
     }
   }
 };

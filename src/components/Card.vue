@@ -1,8 +1,7 @@
 <template>
-    <div class="card">
+    <div class="card" @onclick="onClick">
         <img class="img" :src="img" />
         <div class="title">{{title}}</div>
-  
         <div class="description">{{description}}</div>
     </div>
 </template>
@@ -14,6 +13,11 @@ export default {
         title:String,
         description:String,
         img:String
+    },
+    methods:{
+        onClick(ev) {
+            this.$emit("onClick", alert(ev.target.tagName));
+            }
     }
 }
 </script>
