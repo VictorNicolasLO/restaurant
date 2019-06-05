@@ -1,5 +1,5 @@
 <template>
-    <div class="buttonContainer" :style="styling" @click="onClick($event)">
+    <div class="buttonContainer" :style="styling">
       <img :src="img" />
     </div>
 </template>
@@ -21,7 +21,7 @@ export default {
   },
     methods:{
         onClick(ev) {
-            this.$emit("click", ev.target.tagName);
+            this.$emit("click", ev);
             }
     } 
 }

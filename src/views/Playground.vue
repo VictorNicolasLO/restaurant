@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <IconButton color="#FC5757" :img="bin" />
+    <IconButton color="#FC5757" :img="bin" @click="al"/>
   </div>
 </template>
 
@@ -19,6 +19,11 @@ export default {
   },
   components: {
     IconButton
+  },
+  methods:{
+    al(){
+      alert("ksdfhad")
+    }
   }
 };
 </script>
