@@ -2,7 +2,7 @@
   <div class="home">
     <IconButton color="#FC5757" :img="bin" />
     <br><br>
-    <Card :title="title" :description="description" :img="table" />
+    <Card :title="title"  @click="al" :description="description" :img="table" />
   </div>
 </template>
 
@@ -25,6 +25,11 @@ export default {
       title:"Mesas",
       description:"Proceso principal de sistema",
       table
+    }
+  },
+  methods : {
+    al(){
+      alert("adsfasdf")
     }
   },
   components: {
