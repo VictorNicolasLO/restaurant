@@ -1,24 +1,24 @@
 <template>
   <div class="home">
-    Aqui practica con tus componentes
-    {{exampleData}}
-    <SearchBox v-model="exampleData"/>
+    <IconButton color="#FC5757" :img="bin" />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import SearchBox from "../components/SearchBox";
+import IconButton from "../components/IconButton.vue"
+import bin from "../assets/icons/rubbish-bin.png"
 
 export default {
   name: "playground",
   data() {
     return {
-      exampleData: "example"
+      exampleData: "example",
+      bin
     };
   },
   components: {
-    SearchBox
+    IconButton
   }
 };
 </script>
