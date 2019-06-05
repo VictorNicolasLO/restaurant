@@ -1,5 +1,5 @@
 <template>
-    <div class="buttonContainer" :style="styling" :click="onClick">
+    <div class="buttonContainer" :style="styling" @click="onClick($event)">
       <img :src="img" />
     </div>
 </template>
