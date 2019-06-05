@@ -1,24 +1,25 @@
 <template>
   <div class="home">
-    Aqui practica con tus componentes
-    {{exampleData}}
-    <SearchBox v-model="exampleData"/>
+    <TextField  :placeholder="placeholder" :title="title"/>
+    <TextField  placeholder="a" title="b"/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import SearchBox from "../components/SearchBox";
-
+import TextField from "../components/TextField";
 export default {
   name: "playground",
   data() {
     return {
-      exampleData: "example"
-    };
+      exampleData: "example",
+      title: "Descripción de la Mesa:",
+      placeholder:"Descripcion de la Mesa"
+    }
   },
   components: {
-    SearchBox
+    TextField
+   // textito
   }
-};
+}
 </script>
