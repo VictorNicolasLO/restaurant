@@ -18,8 +18,8 @@ export default {
               'background-color':this.color
           }
       },
-     methods:{
-        onClick(ev) {
+    methods:{
+        onClick:function(ev) {
             alert(ev.target.tagName)
             }
     }

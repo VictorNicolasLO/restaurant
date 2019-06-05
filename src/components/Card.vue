@@ -16,7 +16,7 @@ export default {
     },
     methods:{
         onClick(ev) {
-            alert(ev.target.tagName)
+            alert(ev.target.tagName);
             }
     }
 }
