@@ -21,7 +21,7 @@ export default {
   },
     methods:{
         onClick(ev) {
-            alert(ev.target.tagName)
+            this.$emit("click", ev.target.tagName);
             }
     } 
 }
