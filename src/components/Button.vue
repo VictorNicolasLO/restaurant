@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     onClick(ev) {
-      this.$emit(ev.target.tagName)
+      this.$emit("click",ev)
     }
   }
 };

@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     
-    <Button color="#FC5757" text="Eliminar"  />
+    <Button @click="show" color="#FC5757" text="Eliminar"  />
     <br>
     <Button color="#7ED87C" text="Añadir"  />
 
@@ -25,6 +25,11 @@ export default {
   components: {
     // SearchBox,
     Button
+  },
+  methods:{
+    show(){
+      alert("Hola mundo")
+    }
   }
 };
 </script>
