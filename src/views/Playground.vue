@@ -1,27 +1,31 @@
 <template>
   <div class="home">
-    <TextField :placeholder="placeholder" :title="title"/>
-    <TextField placeholder="a" title="b"/>
+    <IconButton color="#FC5757" :img="bin" @click="al"/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 
-import TextField from "../components/TextField";
+import IconButton from "../components/IconButton.vue";
+import bin from "../assets/icons/rubbish-bin.png";
 
 export default {
   name: "playground",
   data() {
     return {
       exampleData: "example",
-      title: "Descripción de la Mesa:",
-      placeholder: "Descripcion de la Mesa"
+
+      bin
     };
   },
   components: {
-    TextField
-    // textito
+    IconButton
+  },
+  methods: {
+    al() {
+      alert("ksdfhad");
+    }
   }
 };
 </script>
