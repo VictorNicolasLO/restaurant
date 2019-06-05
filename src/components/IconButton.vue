@@ -1,5 +1,5 @@
 <template>
-    <div class="buttonContainer" :style="styling">
+    <div class="buttonContainer" :style="styling" @click="onClick">
       <img :src="img" />
     </div>
 </template>
