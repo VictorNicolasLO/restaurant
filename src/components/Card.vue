@@ -1,5 +1,5 @@
 <template>
-    <div class="card" @onclick="onClick">
+    <div class="card" @click="onClick($event)">
         <img class="img" :src="img" />
         <div class="title">{{title}}</div>
         <div class="description">{{description}}</div>
@@ -16,7 +16,7 @@ export default {
     },
     methods:{
         onClick(ev) {
-            this.$emit("onClick", alert(ev.target.tagName));
+            alert(ev.target.tagName)
             }
     }
 }

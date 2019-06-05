@@ -1,5 +1,5 @@
 <template>
-    <div class="buttonContainer" :style="styling" >
+    <div class="buttonContainer" :style="styling" @click="onClick($event)">
       <img :src="img" />
     </div>
 </template>
@@ -17,7 +17,12 @@ export default {
           return{
               'background-color':this.color
           }
-      }
+      },
+     methods:{
+        onClick(ev) {
+            alert(ev.target.tagName)
+            }
+    }
   } 
 }
 
