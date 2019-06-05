@@ -1,0 +1,65 @@
+<template>
+  <div class="container" :style="styling">
+    <div class="title">{{title}}</div>
+    <div class="fields-container">
+      <div v-for="(field,index) in fields" class="field-container" :key="index">
+        <TextField :placeholder="field.title" :title="field.title" v-model="formData[field.name]"/>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+// @ is an alias to /src
+import TextField from "./TextField";
+export default {
+  data() {
+    return {
+      formData: {}
+    };
+  },
+  props: {
+    title: String,
+    fields: Array,
+    onSubmit: Function,
+    buttonColor: String,
+    buttonIcon: String
+  },
+  components: {
+    TextField
+  }
+};
+</script>
+<style scope>
+.container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.fields-container {
+  margin: auto;
+  display: flex;
+  width: calc(100% - 100px);
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  box-sizing: border-box;
+}
+.fields-container > * {
+  flex-grow: 1;
+  padding: 0 10px;
+  margin: 0 25px;
+  box-sizing: border-box;
+}
+.title {
+  width: 100%;
+  text-align: left;
+  padding-left: 90px;
+  font-weight: 700;
+  font-size: 1.5em;
+  margin-bottom: 40px;
+  box-sizing: border-box;
+}
+</style>
