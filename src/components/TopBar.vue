@@ -100,7 +100,8 @@ export default {
 .usui img{
   width: 23px;
   height: 24px;
-  margin-top: 20  px;
+  position: relative;
+  top: 5px;
 }
 .usun{
   display: inline-block;
