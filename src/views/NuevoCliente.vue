@@ -1,6 +1,6 @@
 <template>
   <div class="nuevo-cliente">
-    <Form :fields="fields" :title="title"/>
+    <Form :fields="fields" :title="title" :buttonColor="buttonColor" :buttonText="buttonText"/>
   </div>
 </template>
 
@@ -12,7 +12,8 @@ export default {
   data() {
     return {
       title: "Nuevo cliente",
-      
+      buttonColor: "red",
+      buttonText: "Crear cliente",
       fields: [
         {
           name: "name",

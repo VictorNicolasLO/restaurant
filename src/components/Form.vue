@@ -1,6 +1,9 @@
 <template>
   <div class="container" :style="styling">
-    <div class="title">{{title}}</div>
+    <div class="title">
+      <span class="title-span">{{title}}</span>
+      <Button class="form-button" :color="buttonColor" :text="buttonText"/>
+    </div>
     <div class="fields-container">
       <div v-for="(field,index) in fields" class="field-container" :key="index">
         <TextField :placeholder="field.title" :title="field.title" v-model="formData[field.name]"/>
@@ -12,6 +15,8 @@
 <script>
 // @ is an alias to /src
 import TextField from "./TextField";
+import Button from "./Button";
+
 export default {
   data() {
     return {
@@ -23,14 +28,16 @@ export default {
     fields: Array,
     onSubmit: Function,
     buttonColor: String,
-    buttonIcon: String
+    buttonIcon: String,
+    buttonText: String
   },
   components: {
-    TextField
+    TextField,
+    Button
   }
 };
 </script>
-<style scope>
+<style scoped>
 .container {
   text-align: center;
   display: flex;
@@ -53,13 +60,19 @@ export default {
   margin: 0 25px;
   box-sizing: border-box;
 }
+.title-span {
+  font-size: 1.5em;
+}
 .title {
   width: 100%;
   text-align: left;
   padding-left: 90px;
   font-weight: 700;
-  font-size: 1.5em;
   margin-bottom: 40px;
   box-sizing: border-box;
+}
+.form-button {
+  float: right;
+  margin-right: 80px;
 }
 </style>

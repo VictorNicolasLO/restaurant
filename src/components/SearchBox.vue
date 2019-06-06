@@ -16,13 +16,13 @@ export default {
   methods: {
     onInput(ev) {
       if (ev) {
-        alert(ev.target.tagName)
+        alert(ev.target.tagName);
       }
     }
   }
 };
 </script>
-<style scope>
+<style scoped>
 input {
   padding: 5px;
 }

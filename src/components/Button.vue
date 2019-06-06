@@ -26,15 +26,17 @@ export default {
   }
 };
 </script>
-<style scope>
+<style scoped>
 .button {
+  padding: 0 5px;
   width: 92px;
   height: 38px;
   border-radius: 5px;
   color: white;
+  cursor: pointer;
 }
 .texto {
   padding-top: 9.5px;
 }
 </style>
->>>>>>> origin/button
+

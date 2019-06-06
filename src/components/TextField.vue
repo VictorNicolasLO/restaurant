@@ -20,7 +20,7 @@ export default {
 };
 </script>
 
-<style scope>
+<style scoped>
 input {
   border-radius: 4px;
   font-family: "Roboto";

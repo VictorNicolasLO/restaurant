@@ -25,6 +25,7 @@ export default {
 
 <style scoped>
 .card {
+  cursor: pointer;
   width: 185px;
   height: 183px;
   background: #fbfbfb;
@@ -52,7 +53,6 @@ export default {
   line-height: 21px;
   text-align: center;
   margin-top: 12px;
-
   color: #596482;
 }
 
