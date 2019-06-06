@@ -2,7 +2,7 @@
   <div class="home">
     <TextField :placeholder="placeholder" :title="title"/>
     <TextField placeholder="a" title="b"/>
-    <Ticket totalcliente=100 ,IVA = 16, total=12 />
+    <Ticket :totalcliente=108.00 :iva=17.28 :total=125.28 />
   </div>
 </template>
 
