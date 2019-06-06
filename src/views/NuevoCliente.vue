@@ -12,6 +12,7 @@ export default {
   data() {
     return {
       title: "Nuevo cliente",
+      
       fields: [
         {
           name: "name",
