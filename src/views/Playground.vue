@@ -2,6 +2,7 @@
   <div class="home">
     <TextField :placeholder="placeholder" :title="title"/>
     <TextField placeholder="a" title="b"/>
+    <Ticket totalcliente=100 ,IVA = 16, total=12 />
   </div>
 </template>
 
@@ -9,7 +10,7 @@
 // @ is an alias to /src
 
 import TextField from "../components/TextField";
-
+import Ticket from "../components/Ticket";
 export default {
   name: "playground",
   data() {
@@ -20,8 +21,8 @@ export default {
     };
   },
   components: {
-    TextField
-    // textito
+    TextField,
+    Ticket
   }
 };
 </script>
