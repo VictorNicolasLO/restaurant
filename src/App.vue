@@ -1,31 +1,38 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link>|
-      <router-link to="/playground">Playground</router-link>
-    </div>
-    <router-view/>
+  <div class="home">
+    <!-- <TopBar :img="img1"> -->
+    <top-bar
+      restaurant="Nombre del restaurant"
+      user="Nombre del usuario"
+      :ima1="img1"
+      :ima2="img2"
+      @click="show"
+    />
   </div>
 </template>
 
-<style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
+<script>
+// @ is an alias to /src
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+import TopBar from "./components/TopBar.vue";
+import img1 from "./assets/icons/home.png";
+import img2 from "./assets/icons/man-user.png";
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+export default {
+  name: "playground",
+  data() {
+    return {
+      img1,
+      img2
+    };
+  },
+  components: {
+    TopBar
+  },
+  methods: {
+    al() {
+      alert("adsfasdf");
+    }
+  }
+};
+</script>
