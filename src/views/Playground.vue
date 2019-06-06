@@ -2,7 +2,7 @@
   <div class="home">
 
     <!-- <TopBar :img="img1"> -->
-    <top-bar restaurant="Hola como esta todo" :img="home" />
+    <top-bar restaurant="Nombre del restaurant" user="Nombre del usuario" :ima1="img1" :ima2="img2" @click="show" />
 
 
   </div>
@@ -11,22 +11,25 @@
 <script>
 // @ is an alias to /src
 import TopBar from "../components/TopBar.vue"
-import home from "../assets/icons/home.png"
+import img1 from "../assets/icons/home.png"
+import img2 from "../assets/icons/man-user.png"
+
 export default {
   name: "playground",
   data() {
     return {
-        home
+        img1,
+        img2
      };
 
   },
   components: {
     TopBar
+  },
+  methods:{
+    show(){
+      alert("Hola mundo")
+    }
   }
-  // methods:{
-  //   show(){
-  //     alert("Hola mundo")
-  //   }
-  // }
 };
 </script>
