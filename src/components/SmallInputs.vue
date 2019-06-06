@@ -34,7 +34,7 @@ export default {
      font-size: 16px;
      line-height: 19px;
      text-align: center;
-
+     display: inline-block;
      color: #000000;
 }
 
