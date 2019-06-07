@@ -1,12 +1,14 @@
 <template>
   <div class="home">
     <IconButton color="#FC5757" :img="bin" @click="al"/>
+    <GenericTable />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import IconButton from "../components/IconButton.vue"
+import GenericTable from "../components/GenericTable.vue"
 import bin from "../assets/icons/rubbish-bin.png"
 
 export default {
@@ -18,7 +20,7 @@ export default {
     };
   },
   components: {
-    IconButton
+    IconButton,GenericTable
   },
   methods:{
     al(){
