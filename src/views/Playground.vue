@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <IconButton color="#FC5757" :img="bin" @click="al"/>
-    <GenericTable />
+    <GenericTable :headers="headers" :items="items" />
   </div>
 </template>
 
@@ -16,7 +16,27 @@ export default {
   data() {
     return {
       exampleData: "example",
-      bin
+      bin,
+      headers:[
+        {title:"Producto"},
+        {title:"Nombre"},
+        {title:"Cantidad"},
+        {title:"Total"}
+      ],
+      items:[
+        {
+          Producto: "1",
+          Nombre: "Producto 1",
+          Cantidad: "2",
+          Total: "50"   
+        },
+        {
+          Producto: "2",
+          Nombre: "Producto 2",
+          Cantidad: "3",
+          Total: "75"  
+        }
+      ]
     };
   },
   components: {

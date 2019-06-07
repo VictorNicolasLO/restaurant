@@ -1,47 +1,43 @@
 <template>
 
-<table style="width:100%">
+<table cellspacing="0" style="width:100%">
   <tr>
-    <th v-for="(item,i) in headers" :key="i">{{item.head}}</th>
-  <tr v-for="(customer,i) in customers" :key="i">  
-    <td>{{i+1}}</td>
-    <td>{{customer.name}}</td>
-    <td></td>
+      <th v-for="(head,i) in headers" :key="i">{{head.title}}</th>
   </tr>
-
+  <tr v-for="(item,i) in items" :key="i">  
+    <td v-for="(head,i) in headers" :key="i">
+      {{item[head.title]}}
+    </td>
+  </tr>
 </table>
-
 
 </template>
 
 
 <script>
   export default {
-    data(){
-      return{
-        headers:[
-          {head:"Numero"},
-          {head:"Nombre Producto"},
-          {head:"Cantidad"},
-          {head:"total"}
-        ],
-        customers:[
-          {name:"Customer one"},
-          {name:"Customer two"}
-        ],
-        cantidades:[
-          {number:"55"},
-          {number:"22"}
-        ]
-      }
+    props:{
+      width: String,
+      headers:[],
+      items:[]
     }
-
   }
 </script>
 
 <style scoped>
-table, th, td {
-  border: 1px solid black;
+
+
+th{
+  color: #918D8D;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+td,th{
+  border-bottom: 0.5px solid #9C9C9C;
 }
 </style>
 
