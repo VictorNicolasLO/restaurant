@@ -2,6 +2,7 @@
   <div class="home">
     <TextField :placeholder="placeholder" :title="title"/>
     <TextField placeholder="a" title="b"/>
+    <LargeButton text='boton' color='#7ed97c' img='disk.png'/>
   </div>
 </template>
 
@@ -9,7 +10,7 @@
 // @ is an alias to /src
 
 import TextField from "../components/TextField";
-
+import LargeButton from '../components/LargeButton'
 export default {
   name: "playground",
   data() {
@@ -20,7 +21,8 @@ export default {
     };
   },
   components: {
-    TextField
+    TextField,
+    LargeButton,
     // textito
   }
 };
