@@ -1,5 +1,5 @@
 <template>
-  <div class="editar-orden">Editar orden :D</div>
+  <div class="editar-orden">Cobro cuenta :D</div>
 </template>
 
 <script>

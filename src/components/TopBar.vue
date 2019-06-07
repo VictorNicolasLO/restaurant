@@ -44,7 +44,7 @@ export default {
   width: 70%;
   position: relative;
   text-align: left;
-  padding-left: 20px;
+
   box-sizing: border-box;
 
   /* left: -170px; */
@@ -56,6 +56,7 @@ export default {
   height: 67px;
   text-align: center;
   vertical-align: top;
+  cursor: pointer;
 }
 .hom img {
   text-align: center;
@@ -87,6 +88,8 @@ export default {
 .usu {
   display: inline-block;
   width: 29%;
+  text-align: right;
+  padding-right: 10px;
 }
 .usui {
   display: inline-block;

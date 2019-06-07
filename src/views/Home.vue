@@ -21,7 +21,9 @@ import table from "../assets/icons/dinner-table.png";
 export default {
   name: "home",
   methods: {
-    goMesas() {}
+    goMesas() {
+      this.$router.push({ path: "mesas" });
+    }
   },
   data() {
     return {
