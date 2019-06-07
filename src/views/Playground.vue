@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <IconButton color="#FC5757" :img="bin" @click="al"/>
-    <GenericTable :headers="headers" :items="items" />
+    <GenericTable width="900px" :headers="headers" :items="items" />
   </div>
 </template>
 

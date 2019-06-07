@@ -1,6 +1,6 @@
 <template>
 
-<table cellspacing="0" style="width:100%">
+<table cellspacing="0" :style="setWidth">
   <tr>
       <th v-for="(head,i) in headers" :key="i">{{head.title}}</th>
   </tr>
@@ -20,8 +20,16 @@
       width: String,
       headers:[],
       items:[]
-    }
+    },
+    computed: {
+      setWidth: function(){
+          return{
+              'width':this.width
+          }
+      }
   }
+  }
+
 </script>
 
 <style scoped>
