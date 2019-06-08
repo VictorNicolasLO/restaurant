@@ -2,7 +2,7 @@
   <div class="home">
     <TextField :placeholder="placeholder" :title="title"/>
     <TextField placeholder="a" title="b"/>
-    <LargeButton text="boton" color="#7ed97c" img="disk.png"/>
+    <Ticket :totalcliente=108.00 :iva=17.28 :total=125.28 />
   </div>
 </template>
 
@@ -10,8 +10,7 @@
 // @ is an alias to /src
 
 import TextField from "../components/TextField";
-import LargeButton from "../components/LargeButton";
-
+import Ticket from "../components/Ticket";
 export default {
   name: "playground",
   data() {
@@ -42,8 +41,7 @@ export default {
   },
   components: {
     TextField,
-    LargeButton
-    // textito
+    Ticket
   }
 };
 </script>
