@@ -1,23 +1,23 @@
 <template>
   <div class="home">
-    <IconButton color="#FC5757" :img="bin" @click="al"/>
-    <GenericTable width="900px" :headers="headers" :items="items"/>
+    <TextField :placeholder="placeholder" :title="title"/>
+    <TextField placeholder="a" title="b"/>
+    <LargeButton text="boton" color="#7ed97c" img="disk.png"/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 
-import IconButton from "../components/IconButton.vue";
-import GenericTable from "../components/GenericTable.vue";
-import bin from "../assets/icons/rubbish-bin.png";
+import TextField from "../components/TextField";
+import LargeButton from "../components/LargeButton";
 
 export default {
   name: "playground",
   data() {
     return {
       exampleData: "example",
-      bin,
+
       headers: [
         { title: "Producto" },
         { title: "Nombre" },
@@ -41,13 +41,9 @@ export default {
     };
   },
   components: {
-    IconButton,
-    GenericTable
-  },
-  methods: {
-    al() {
-      alert("adsfasdf");
-    }
+    TextField,
+    LargeButton
+    // textito
   }
 };
 </script>
