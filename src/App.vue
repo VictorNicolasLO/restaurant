@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div>
     <!-- <TopBar :img="img1"> -->
     <top-bar
       restaurant="Nombre del restaurant"
@@ -16,7 +16,7 @@
 // @ is an alias to /src
 
 import TopBar from "./components/TopBar.vue";
-import img1 from "./assets/icons/home.png";
+import img1 from "./assets/icons/left-arrow.png";
 import img2 from "./assets/icons/man-user.png";
 
 export default {
@@ -37,7 +37,7 @@ export default {
   }
 };
 </script>
-<style>
+<style scoped>
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

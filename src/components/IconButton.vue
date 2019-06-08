@@ -1,6 +1,6 @@
 <template>
-  <div class="buttonContainer" :style="styling" @click="onClick">
-    <img :src="img">
+  <div class="buttonContainer" :style="styling" @click="onClick" v-tooltip="tooltip">
+    <img :src="imageIcon">
   </div>
 </template>
 
@@ -10,9 +10,13 @@
 export default {
   props: {
     color: String,
-    img: String
+    img: String,
+    tooltip: String
   },
   computed: {
+    imageIcon: function() {
+      return require(`../assets/icons/${this.img}`);
+    },
     styling: function() {
       return {
         "background-color": this.color
@@ -35,13 +39,14 @@ h2 {
 }
 
 .buttonContainer {
+  cursor: pointer;
   padding: 5px 5px 1px 5px;
   display: inline-block;
   border-radius: 5px;
+  text-align: center;
 }
 
 img {
-  width: 25px;
   height: 24px;
 }
 </style>

@@ -35,6 +35,9 @@ export default {
 </script>
 
 <style scoped>
+* {
+  text-align: center;
+}
 h1 {
 }
 h2 {

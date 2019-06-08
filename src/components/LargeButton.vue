@@ -1,58 +1,59 @@
 <template>
-  <button @click="handleClick" :style="style" id='largeButton'>
-    <img class="iconImage" v-bind:src="imageIcon()" />
-    {{text}}</button>
+  <button @click="handleClick" :style="style" id="largeButton">
+    <img class="iconImage" v-bind:src="imageIcon()">
+    {{text}}
+  </button>
 </template>
 
 <script>
 export default {
-  name: 'largeButton',
+  name: "largeButton",
   props: {
     text: {
       type: String,
-      required: false,
+      required: false
     },
-    color:{
+    color: {
       type: String,
-      required: true,
+      required: true
     },
-    img:{
+    img: {
       type: String,
-      required: false,
-    },
+      required: false
+    }
   },
   computed: {
     style() {
       return `background-color: ${this.color}`;
     }
   },
-  methods:{
+  methods: {
     imageIcon() {
       return require(`../assets/icons/${this.img}`);
     },
-    handleClick() {
-      this.$emit('clicked');
+    handleClick(ev) {
+      this.$emit("click", ev);
     }
   }
-}
+};
 </script>
 
 <style>
-  #largeButton{
-    border-radius: 5px;
-    outline: none;
-    border: none;
-    padding: 10px;
-    color: #ffffff;
-    font-size: 18px;
-    
-    display: flex;
-    justify-content: center;
-  }
-  .iconImage{
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-  }
+#largeButton {
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  padding: 10px;
+  color: #ffffff;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+}
+.iconImage {
+  height: 20px;
+  margin-right: 10px;
+}
 </style>
 

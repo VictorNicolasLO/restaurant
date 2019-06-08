@@ -26,8 +26,9 @@ export default {
     user: String
   },
   methods: {
-    goHome(ev) {
-      this.$emit("click", ev);
+    goHome() {
+      this.$router.go(-1);
+      //  this.$emit("click", ev);
     }
   }
 };
