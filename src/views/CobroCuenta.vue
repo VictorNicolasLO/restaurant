@@ -1,5 +1,5 @@
 <template>
-  <div class="editar-orden">
+  <div class="container">
     <div class="title">
       Cobro cuenta
     </div>
@@ -27,9 +27,20 @@
     <GenericTable class="genericTable" width="900px" :headers="headers" :items="items"  />
     <br>
     <LargeButton class="cobrar" text="Cobrar" color="#4D4C8A" img="pay.png"/>
+    <Ticket class="ticket" :totalcliente="93" :iva="14.88" :total="107.88" />
+    <br>
+    <div class="cliente2">
+      Cliente 2
+    </div>
+    <br>
+      <GenericTable class="genericTable2" width="900px" :headers="headers" :items="items2"  />
+      <LargeButton class="cobrar2" text="Cobrar" color="#4D4C8A" img="pay.png"/>
+      
+      <div>
+        <Ticket class="ticket2" :totalcliente="108" :iva="17.28" :total="125.28" />
+      </div>
+ 
 
-    
-    
   </div>
 
 </template>
@@ -38,13 +49,14 @@
 
 import LargeButton from "../components/LargeButton";
 import GenericTable from "../components/GenericTable";
+import Ticket from "../components/Ticket";
 
 
 // @ is an alias to /src
 export default {
   name: "editar-orden",
   components:{
-    LargeButton,GenericTable
+    LargeButton,GenericTable,Ticket
   },
   data(){
     return{
@@ -70,6 +82,22 @@ export default {
           Cantidad:"1",
           Total:"$25.00"
         }
+      ],
+      items2:[
+        {
+          Producto:"3",
+          Nombre:"nombre del producto 3",
+          Fecha:"03/06/2019 16:00pm",
+          Cantidad:"1",
+          Total:"$89.00"
+        },
+        {
+          Producto:"4",
+          Nombre:"nombre del producto 4",
+          Fecha:"03/06/2019 16:00pm",
+          Cantidad:"1",
+          Total:"$19.00"
+        }
       ]
     }
   }
@@ -77,12 +105,16 @@ export default {
 </script>
 
 <style scoped>
+.container{
+  position: relative;
+  margin: 0px auto;
+  width: 55%;
+  top:-75px;
+}
 
 .title{
 position: absolute;
-width: 233px;
-height: 40px;
-left: 22px;
+left: 67px;
 top: 105px;
 
 font-family: Roboto;
@@ -152,6 +184,7 @@ width: 296px;
 height: 34px;
 left: 67px;
 top: 220px;
+padding-left: 5px;
 
 background: #ECECEC;
 border: 1px solid #646464;
@@ -178,9 +211,7 @@ top: 220px;
 
 .cliente{
 position: absolute;
-width: 77px;
-height: 20px;
-left: 54px;
+left: 67px;
 top: 281px;
 
 font-family: Roboto;
@@ -208,6 +239,40 @@ width: 190px;
 height: 40px;
 left: 67px;
 top: 437px;
+}
+
+.ticket{
+position: absolute;
+width: 341px;
+height: 76px;
+left: 629px;
+top: 422px;
+}
+
+.cliente2{
+position: absolute;
+  top: 495px;
+  left: 67px;
+}
+
+.genericTable2{
+  position: absolute;
+  top: 522px;
+  left: 69px;
+}
+
+.cobrar2{
+  position: absolute;
+width: 190px;
+height: 40px;
+left: 67px;
+top: 657px;
+}
+
+.ticket2{
+position: absolute;
+left: 629px;
+top: 642px;
 }
 
 </style>
