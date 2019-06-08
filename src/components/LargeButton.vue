@@ -10,7 +10,7 @@ export default {
   props: {
     text: {
       type: String,
-      required: true,
+      required: false,
     },
     color:{
       type: String,
@@ -28,7 +28,7 @@ export default {
   },
   methods:{
     imageIcon() {
-      return require(`../assets/${this.img}`);
+      return require(`../assets/icons/${this.img}`);
     },
     handleClick() {
       this.$emit('clicked');
@@ -45,7 +45,7 @@ export default {
     padding: 10px;
     color: #ffffff;
     font-size: 18px;
-    width: 180px;
+    
     display: flex;
     justify-content: center;
   }
