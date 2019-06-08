@@ -30,7 +30,7 @@ export default {
   height: 183px;
   background: #fbfbfb;
   border: 1px solid #0a0a0a;
-
+  text-align: center;
   box-sizing: border-box;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
   border-radius: 10px;

@@ -5,6 +5,8 @@ import NuevoCliente from './views/NuevoCliente.vue';
 import Mesas from './views/Mesas';
 import CobroCuenta from './views/CobroCuenta';
 import EditarOrden from './views/EditarOrden';
+import NuevaMesa from './views/NuevaMesa';
+import EditarMesa from './views/EditarMesa';
 
 Vue.use(Router);
 
@@ -29,13 +31,23 @@ export default new Router({
     },
     {
       path: '/mesas',
-      name: 'cobro-cuenta',
+      name: 'mesas',
       component: Mesas,
     },
     {
-      path: '/editar-orden',
+      path: '/nueva-mesa',
+      name: 'nueva-mesa',
+      component: NuevaMesa,
+    },
+    {
+      path: '/editar-orden/:id',
       name: 'editar-orden',
       component: EditarOrden,
+    },
+    {
+      path: '/mesas/:id',
+      name: 'editar-mesa',
+      component: EditarMesa,
     },
     {
       path: '/playground',

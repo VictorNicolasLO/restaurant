@@ -2,7 +2,13 @@
   <div class="container" :style="styling">
     <div class="title">
       <span class="title-span">{{title}}</span>
-      <Button class="form-button" :color="buttonColor" :text="buttonText"/>
+      <LargeButton
+        class="form-button"
+        :color="buttonColor"
+        :text="buttonText"
+        :img="buttonIcon"
+        @click="sumbit"
+      />
     </div>
     <div class="fields-container">
       <div v-for="(field,index) in fields" class="field-container" :key="index">
@@ -15,9 +21,14 @@
 <script>
 // @ is an alias to /src
 import TextField from "./TextField";
-import Button from "./Button";
+import LargeButton from "./LargeButton";
 
 export default {
+  methods: {
+    sumbit() {
+      this.$emit("submit", this.formData);
+    }
+  },
   data() {
     return {
       formData: {}
@@ -33,12 +44,13 @@ export default {
   },
   components: {
     TextField,
-    Button
+    LargeButton
   }
 };
 </script>
 <style scoped>
 .container {
+  margin-top: 40px;
   text-align: center;
   display: flex;
   flex-direction: column;

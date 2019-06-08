@@ -1,7 +1,5 @@
 <template>
-  <div class="home">
-    <input type="text" :placeholder="placeholder" :value="value" @input="onInput">
-  </div>
+  <input type="text" :placeholder="placeholder" :value="value" @input="onInput">
 </template>
 
 <script>
@@ -15,15 +13,30 @@ export default {
   },
   methods: {
     onInput(ev) {
-      if (ev) {
-        alert(ev.target.tagName);
-      }
+      this.$emit("input", ev.target.value);
     }
   }
 };
 </script>
 <style scoped>
 input {
-  padding: 5px;
+  border-radius: 4px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  display: inline-block;
+  align-items: center;
+  text-align: left;
+
+  -webkit-appearance: none;
+  border: solid 1px gray;
+
+  padding: 8px 0;
+  padding-left: 10px;
+}
+:-webkit-autofill {
+  color: #fff !important;
 }
 </style>
