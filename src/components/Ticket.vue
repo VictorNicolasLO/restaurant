@@ -54,10 +54,8 @@ export default {
         margin: 0 auto;
         */
         
-        width: 341px;
+        
         height: 76px;
-        left: 629px;
-        top: 642px;
 
         background: #FFFFFF;
         border: 1px solid #BFBFBF;

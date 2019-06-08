@@ -3,42 +3,47 @@
     <div class="title">
       Cobro cuenta
     </div>
-    <br>
-    <div class="nombreMesa">
-      Nombre mesa
+    <div class="namesContainer">
+      <div class="nombreMesa">
+        Nombre mesa
+        <br>
+        <input type="input" placeholder="Mesa 1">
+      </div>
+      <div class="cobroSeparado">
+        Cobro por separado
+        <br>
+          <LargeButton class="largePurple" color="#6835F7" img="multiple-users-silhouette.png"/>
+      </div>
+      <div class="cobroConjunto">
+        Cobro en conjunto
+        <br>
+          <LargeButton class="largeBrown" color="#A59595" img="multiple-users-silhouette.png"/>
+      </div>
     </div>
-    <div class="cobroSeparado">
-      Cobro por separado
-    </div>
-    <div class="cobroConjunto">
-      Cobro en conjunto
-    </div>
-    <br>
-    <div>
-      <input type="input" placeholder="Mesa 1">
-    </div>
-      <LargeButton class="largePurple" color="#6835F7" img="multiple-users-silhouette.png"/>
-      <LargeButton class="largeBrown" color="#A59595" img="multiple-users-silhouette.png"/>
-    <br>
+    
+
     <div class="cliente">
       Cliente
+      <br>
+      <GenericTable class="genericTable" width="900px" :headers="headers" :items="items"  />
     </div>
-    <br>
-    <GenericTable class="genericTable" width="900px" :headers="headers" :items="items"  />
-    <br>
-    <LargeButton class="cobrar" text="Cobrar" color="#4D4C8A" img="pay.png"/>
-    <Ticket class="ticket" :totalcliente="93" :iva="14.88" :total="107.88" />
-    <br>
-    <div class="cliente2">
-      Cliente 2
+    
+    <div class="totalContainer">
+      <LargeButton class="cobrar" text="Cobrar" color="#4D4C8A" img="pay.png"/>
+      <Ticket class="ticket" :totalcliente="93" :iva="14.88" :total="107.88" />
     </div>
-    <br>
-      <GenericTable class="genericTable2" width="900px" :headers="headers" :items="items2"  />
-      <LargeButton class="cobrar2" text="Cobrar" color="#4D4C8A" img="pay.png"/>
-      
-      <div>
-        <Ticket class="ticket2" :totalcliente="108" :iva="17.28" :total="125.28" />
-      </div>
+
+
+    <div class="cliente">
+      Cliente
+      <br>
+      <GenericTable class="genericTable" width="900px" :headers="headers" :items="items2"  />
+    </div>
+    
+    <div class="totalContainer">
+      <LargeButton class="cobrar" text="Cobrar" color="#4D4C8A" img="pay.png"/>
+      <Ticket class="ticket" :totalcliente="93" :iva="14.88" :total="107.88" />
+    </div>
  
 
   </div>
@@ -81,6 +86,46 @@ export default {
           Fecha:"03/06/2019 16:00pm",
           Cantidad:"1",
           Total:"$25.00"
+        },
+        
+        {
+          Producto:"2",
+          Nombre:"nombre del producto 1",
+          Fecha:"03/06/2019 16:00pm",
+          Cantidad:"1",
+          Total:"$25.00"
+        },
+        
+        {
+          Producto:"2",
+          Nombre:"nombre del producto 1",
+          Fecha:"03/06/2019 16:00pm",
+          Cantidad:"1",
+          Total:"$25.00"
+        },
+        
+        {
+          Producto:"2",
+          Nombre:"nombre del producto 1",
+          Fecha:"03/06/2019 16:00pm",
+          Cantidad:"1",
+          Total:"$25.00"
+        },
+        
+        {
+          Producto:"2",
+          Nombre:"nombre del producto 1",
+          Fecha:"03/06/2019 16:00pm",
+          Cantidad:"1",
+          Total:"$25.00"
+        },
+        
+        {
+          Producto:"2",
+          Nombre:"nombre del producto 1",
+          Fecha:"03/06/2019 16:00pm",
+          Cantidad:"1",
+          Total:"$25.00"
         }
       ],
       items2:[
@@ -109,81 +154,87 @@ export default {
   position: relative;
   margin: 0px auto;
   width: 55%;
-  top:-75px;
+
 }
 
 .title{
-position: absolute;
-left: 67px;
-top: 105px;
+
+position: relative;
+margin-top: 40px;
+
+text-align: left;
 
 font-family: Roboto;
 font-style: normal;
 font-weight: normal;
 font-size: 25px;
 line-height: 29px;
-text-align: center;
+
 
 color: #000000;
 }
 
+.namesContainer{
+  text-align: left;
+  margin-top: 38px;
+}
+
 .nombreMesa{
-position: absolute;
-width: 181px;
-height: 21px;
-left: 27px;
-top: 183px;
+display: inline-block;
+position: relative;
+float: left;
+margin-right: 17px;
 
 font-family: Roboto;
 font-style: normal;
 font-weight: normal;
 font-size: 16px;
 line-height: 19px;
-text-align: center;
+text-align: left;;
 
 color: #000000;
 }
 
 .cobroSeparado{
-position: absolute;
-width: 181px;
-height: 21px;
-left: 363px;
-top: 183px;
+display: inline-block;
+position: relative;
+float: left;
+margin-right: 17px;
+
 
 font-family: Roboto;
 font-style: normal;
 font-weight: normal;
 font-size: 16px;
 line-height: 19px;
-text-align: center;
+text-align: left;
 
 color: #000000;
 }
 
 .cobroConjunto{
-position: absolute;
-width: 181px;
-height: 21px;
-left: 669px;
-top: 183px;
+display: inline-block;
+position: relative;
+float: left;
+
 
 font-family: Roboto;
 font-style: normal;
 font-weight: normal;
 font-size: 16px;
 line-height: 19px;
-text-align: center;
+text-align: left;
 
 color: #000000;
 }
 
+
 input{
-position: absolute;
+position: relative;
 width: 296px;
 height: 34px;
-left: 67px;
-top: 220px;
+display: inline-block;
+float: left;
 padding-left: 5px;
 
 background: #ECECEC;
@@ -193,26 +244,25 @@ border-radius: 5px;
 }
 
 .largePurple{
-  width: 300px;
-  position: absolute;
+width: 300px;
+position: relative;
 width: 295px;
 height: 34px;
-left: 380px;
-top: 220px;
+display: inline-block;
 }
 
 .largeBrown{
-position: absolute;
+position: relative;
 width: 289px;
 height: 34px;
-left: 692px;
-top: 220px;  
+display: inline-block;
 }
 
 .cliente{
-position: absolute;
-left: 67px;
-top: 281px;
+position: relative;
+margin-top: 27px;
+float: left;
+text-align: left;
 
 font-family: Roboto;
 font-style: normal;
@@ -228,51 +278,23 @@ color: #000000;
 
 
 .genericTable{
-  position: absolute;
-  top: 308px;
-  left: 70px;
+  margin-top: 7px;
+  position: relative; 
 }
 
 .cobrar{
-  position: absolute;
+position: relative;
+margin-top: 25px;
+margin-right: 452px;
 width: 190px;
 height: 40px;
-left: 67px;
-top: 437px;
+float: left;
 }
 
 .ticket{
-position: absolute;
-width: 341px;
-height: 76px;
-left: 629px;
-top: 422px;
-}
-
-.cliente2{
-position: absolute;
-  top: 495px;
-  left: 67px;
-}
-
-.genericTable2{
-  position: absolute;
-  top: 522px;
-  left: 69px;
-}
-
-.cobrar2{
-  position: absolute;
-width: 190px;
-height: 40px;
-left: 67px;
-top: 657px;
-}
-
-.ticket2{
-position: absolute;
-left: 629px;
-top: 642px;
+position: relative;
+margin-top: 10px;
+float: left;
 }
 
 </style>
